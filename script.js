@@ -16,9 +16,9 @@ var connectionsRef = database.ref("/connections");
 var connectedRef = database.ref(".info/connected");
 
 
-//var player = []; con?
+// var player = []; con?
 
-
+// Adds new users to connectionsRef list and removes when disconnected
 connectedRef.on("value", function (snapshot) {
     if (snapshot.val()) {
         var con = connectionsRef.push(true);
@@ -26,18 +26,43 @@ connectedRef.on("value", function (snapshot) {
     }
 });
 
+// When new connectionsRef added, do:   
 connectionsRef.on("value", function (snapshot) {
     console.log(snapshot.numChildren());
     // $("#win-or-lose").text(snapshot.numChildren()); not working
 });
 
 $("input:radio").on("click", function () {
-    if ($('input[name=p1-button]:checked').length != 0 && $('input[name=p2-button]:checked').length != 0) {
-        console.log("yes");
-    } else {
-        console.log("no");
-    }
+    
+    
+    
+    
+    
+    // if ($('input[name=p1-button]:checked').length != 0 && $('input[name=p2-button]:checked').length != 0) {
+    //     console.log("yes");
+    // } else {
+    //     console.log("no");
+    // }  WORKING!!!
 });
+
+$("#player-1-start").on("click", function() {
+    console.log("clicked!");
+    $(".p1-buttons-body").css("visibility", "visible");
+    $(".p1-final-body").css("visibility", "visible");
+    $("#player-1-start").css("visibility", "hidden");
+    $("#player-2-start").css("visibility", "hidden");
+});
+
+$("#player-2-start").on("click", function() {
+    console.log("clicked!");
+    $(".p2-buttons-body").css("visibility", "visible");
+    $(".p2-final-body").css("visibility", "visible");
+    $("#player-2-start").css("visibility", "hidden");
+    $("#player-1-start").css("visibility", "hidden");
+});
+
+
+
 
 
 

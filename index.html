@@ -29,24 +29,38 @@
         </div>
 
         <div class="row">
+            <!-- Player 1 Panel -->
             <div class="panel col-lg-4 text-center" id="p1-game"> <!-- check panel pos -->
                 <div class="panel-heading">Player 1</div>
-                <div class="panel-body">
-                    
+                
+                <!-- Start Body -->
+                <div class="panel-body p1-start-body">
+                    <button id=player-1-start>Player One</button>
+                </div>   
+                
+                <!-- Buttons Body -->
+                <div class="panel-body p1-buttons-body">
                     <form id="p1-buttons">
                         <label>Rock <input type="radio" name="p1-button" id="p1-rock"></label><br>
                         <label>Paper <input type="radio" name="p1-button" id="p1-paper"></label><br>
                         <label>Scissors <input type="radio" name="p1-button" id="p1-scissors"></label>
                     </form>
-
-                    <div id="p1-answer">player 1 chose: </div> <!-- to become a var hind and unhide after both players chose -->                    
-
                     <br>
                     <div id="p1-wins">Wins: 0</div>
                     <div id="p1-loses">Loses: 0</div>
                 </div>
+
+                <!-- Final Body -->
+                <div class="panel-body p1-final-body">
+                    <div id="p1-answer">player 1 chose: </div> <!-- to become a var hind and unhide after both players chose -->                                            
+                </div>
+
+            <!-- End P1 -->
             </div>
 
+
+
+            <!-- Win Or Lose Panel -->
             <div class="panel col-lg-4 text-center" id="win-lose">
                 <div class="panel-heading">Win or Lose?</div>
                 <div class="panel-body">
@@ -54,24 +68,41 @@
                 </div>
             </div>
 
-            <div class="panel col-lg-4 text-center" id="p2-game">
+
+
+            <!-- Player 2 Panel -->
+            <div class="panel col-lg-4 text-center" id="p2-game"> <!-- check panel pos -->
                 <div class="panel-heading">Player 2</div>
-                <div class="panel-body">
-                    
+                
+                <!-- Start Body -->
+                <div class="panel-body p2-start-body">
+                    <button id=player-2-start>Player Two</button>
+                </div>   
+                
+                <!-- Buttons Body -->
+                <div class="panel-body p2-buttons-body">
                     <form id="p2-buttons">
                         <label>Rock <input type="radio" name="p2-button" id="p2-rock"></label><br>
                         <label>Paper <input type="radio" name="p2-button" id="p2-paper"></label><br>
                         <label>Scissors <input type="radio" name="p2-button" id="p2-scissors"></label>
                     </form>
-
-                    <div id="p2-answer">player 2 chose: </div> <!-- to become a var hind and unhide after both players chose -->
-
                     <br>
-                    <div id="p2-wins">Wins: 0</div> <!-- make 0 into var -->
+                    <div id="p2-wins">Wins: 0</div>
                     <div id="p2-loses">Loses: 0</div>
                 </div>
+
+                <!-- Final Body -->
+                <div class="panel-body p2-final-body">
+                    <div id="p2-answer">player 2 chose: </div> <!-- to become a var hind and unhide after both players chose -->                                            
+                </div>
+
+            <!-- End P2 -->
             </div>
+        
+        <!-- End Row -->
         </div>
+
+
 
         <!-- Javascript -->
         <script src="script.js"></script>
