@@ -16,6 +16,9 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
 
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+
 </head>
 
 <body>
@@ -26,36 +29,56 @@
         </div>
 
         <div class="row">
-            <div class="panel col-lg-4 p1-game text-center"> <!-- check panel pos -->
+            <div class="panel col-lg-4 text-center" id="p1-game"> <!-- check panel pos -->
                 <div class="panel-heading">Player 1</div>
                 <div class="panel-body">
+                    
                     <form id="p1-buttons">
                         <label>Rock <input type="radio" name="p1-button" id="p1-rock"></label><br>
                         <label>Paper <input type="radio" name="p1-button" id="p1-paper"></label><br>
                         <label>Scissors <input type="radio" name="p1-button" id="p1-scissors"></label>
                     </form>
+
+                    <div id="p1-answer">player 1 chose: </div> <!-- to become a var hind and unhide after both players chose -->                    
+
                     <br>
-                    <div class="p1-wins">Wins: 0</div>
-                    <div class="p1-loses">Loses: 0</div>
+                    <div id="p1-wins">Wins: 0</div>
+                    <div id="p1-loses">Loses: 0</div>
                 </div>
             </div>
 
-            <div class="panel col-lg-4 win-lose text-center">
+            <div class="panel col-lg-4 text-center" id="win-lose">
                 <div class="panel-heading">Win or Lose?</div>
                 <div class="panel-body">
-                    <div class="win-lose-text">Win or lose filler</div>
+                    <div id="win-lose-text">Win or lose filler</div>
                 </div>
             </div>
 
-            <div class="panel col-lg-4 p2-game text-center">
+            <div class="panel col-lg-4 text-center" id="p2-game">
                 <div class="panel-heading">Player 2</div>
                 <div class="panel-body">
-                    <div class="p2-choice">Player 2 choice filler</div>
+                    
+                    <form id="p2-buttons">
+                        <label>Rock <input type="radio" name="p2-button" id="p2-rock"></label><br>
+                        <label>Paper <input type="radio" name="p2-button" id="p2-paper"></label><br>
+                        <label>Scissors <input type="radio" name="p2-button" id="p2-scissors"></label>
+                    </form>
+
+                    <div id="p2-answer">player 2 chose: </div> <!-- to become a var hind and unhide after both players chose -->
+
+                    <br>
+                    <div id="p2-wins">Wins: 0</div> <!-- make 0 into var -->
+                    <div id="p2-loses">Loses: 0</div>
                 </div>
             </div>
         </div>
 
+        <!-- Javascript -->
+        <script src="script.js"></script>
+
         <script>
+
+            //$("#win-lose-text").text("hi ;)");
             
         </script>
     </div>
